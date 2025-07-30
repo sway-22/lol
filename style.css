@@ -1,0 +1,156 @@
+body{
+    background-color: #284d8a;
+}
+#pic {
+    height: 50vh;
+    border: #548ce8 50px solid;
+    border-radius: 10%;
+    animation: fadein 3s ease 0.2s 1 normal,spin 3s ease-in-out 0.2s 1 normal, moving 10s linear 4s infinite normal;
+    
+}
+
+#pic:hover{
+    transform: scale(1.01);
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes moving{
+    0%{
+        transform: translate(0px);
+    }
+    25%{
+        transform: translate(20px);
+    }
+    50%{
+        opacity: translate(0px);
+    }
+    75%{
+        transform: translate(-20px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
+
+@keyframes spin{
+    0%{
+        scale: 0;
+    }
+    50%{
+        scale: 1.5;
+        transform: rotate(0);
+        border-radius: 20%;
+    }
+    100%{
+        scale: 1;
+        transform: rotate(360deg);
+        border-radius: 10%;
+    }
+}
+
+#hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+#click{
+    background-color: #548ce8;
+    width: 12vw;
+    height: 10vh;
+    border-radius: 5%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30px;
+
+    animation: fadeinclick 4s ease 0.2s 1 normal;
+}
+
+
+@keyframes fadeinclick{
+    0%{
+        opacity: 0;
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#click:hover{
+    border: #DB9D4C 2px solid;
+    transform: scale(1.02);
+}
+
+#linktext{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+
+#linktext:hover{
+    transform: scale(1.05);
+    color: #DB9D4C;
+}
+
+#heading{
+    color: white;
+    position: relative;
+    bottom: 20px;
+    font-size: larger;
+    animation: textcolor 3s linear 4s infinite normal, fadeintext 4s ease 0.2s 1 forwards; 
+}
+    
+
+#heading:hover{
+    transform: scale(1.02);
+}
+
+@keyframes textcolor{
+    0%{
+        color: white;
+    }
+
+    50%{
+        color: #DB9D4C;
+    }
+
+    100%{
+        color: white;
+    }
+}
+
+@keyframes fadeintext{
+    0%{
+        opacity: 0;
+    }
+    98%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
