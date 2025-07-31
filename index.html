@@ -8,13 +8,27 @@
 </head>
 <body>
     <div id="wrap">
-    <h id="heading">Meri Fielding Set Hai 🥀</h>
+    <h id="heading">Meri Fielding Set Hogi Very Soon 🥀</h>
     <div id="hero">
-        <img src="me.JPG" alt="my picture lol" id="pic">
+        <img src="me but black and white.JPG" alt="my picture lol" id="pic">
     </div>
     <div id="click">
         <a href="index.html" id="linktext">Once More!!</a>
     </div>
     </div>
+    <audio id="myAudio" preload="auto">
+    <source src="dardhua.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <script>
+    function enableAudioOnTap() {
+      const audio = document.getElementById("myAudio");
+      audio.play();
+      document.removeEventListener("click", enableAudioOnTap);
+      document.removeEventListener("touchstart", enableAudioOnTap);
+    }
+    document.addEventListener("click", enableAudioOnTap);
+    document.addEventListener("touchstart", enableAudioOnTap);
+  </script>
 </body>
 </html>
